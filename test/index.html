@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>****</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <!-- <script src="js/react.js"></script>
+    <script src="js/react-dom.js"></script>
+    <script src="js/babel.js"></script> -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="test"></div>
+    <script type="text/babel">
+
+      var Block = React.createClass({
+        render: function () {
+          return (
+            <p>hello</p>
+          );
+        }
+      });
+      ReactDOM.render(
+        
+      <Block />, 
+      document.getElementById('root')
+      )
+
+    </script>
+  </body>
+</html> 
