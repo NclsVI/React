@@ -16,6 +16,16 @@ class App extends Component {
       </div>
     );
   }
+};
+class Test extends Component {
+  render() {
+    return (
+      <div>
+        test work
+      </div>
+    );
+  }
 }
 
-export default App;
+//export default App;
+export default Test;
