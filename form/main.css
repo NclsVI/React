@@ -1,0 +1,135 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	position: relative;
+	font-family: Roboto;
+}
+.form__item{
+	position: relative;
+}
+.form__item .error{
+	position: absolute;
+	bottom: -13px;
+	color: red;
+	font-size: 12px;
+}
+.form-field{
+	display: block;
+	width: 100%;
+	max-width: 100%;	
+	margin: 14px auto;
+	border: 1px solid #3333335c;
+	border-radius: 5px;
+	outline: none;
+	height: 30px;
+	padding: 0 10px;
+	transition: .3s;
+	position: relative;
+}
+
+.form-field:focus,
+.form-field:valid{
+	border: 1px solid #31802d;
+
+}
+.form-field + label{
+	position: absolute;
+	color: rgba(0,0,0,0.7);
+	left: 5px;
+	top: 5px;
+	text-transform: capitalize;
+	transition: .3s;
+	font-size: 14px;
+	line-height: 20px;
+	cursor: text;
+}
+.form-field.invalid{
+	border: 1px solid red;
+}
+.form-field.invalid + label,
+.form-field.invalid:focus + label,
+.form-field.invalid:valid + label{
+	color: red;
+}
+
+.form-field:focus + label,
+.form-field:valid + label{
+	top: -14px;
+	font-size: 10px;
+	color: #31802d;
+}
+
+.form__item--radio{
+	display: none;
+}
+.form__item--radio + label{
+	color: gray;
+	background-color: rgba(0,0,0,0.3);
+	display: inline-block;
+	width: 49%;
+	height: 30px;
+	cursor: pointer;
+	text-transform: capitalize;
+	text-align: center;
+	border-radius: 5px;
+	line-height: 30px;
+	transition: .3s;
+}
+.form__item--radio:checked + label{
+	color: #f4f4f4;
+	background-color: #31802d;
+}
+.form__item--submit{
+	background-color: #31802d;
+	border-radius: 5px;
+	border: 1px solid #31802d;
+	color: #f4f4f4;
+	text-transform: uppercase;
+	display: inline-block;
+	width: 100%;
+	padding: 10px;
+	cursor: pointer;
+	transition: .3s;
+	outline: none;
+}
+.form__item--submit:focus,
+.form__item--submit:hover{
+	transform: scale(1.05);
+}
+.form{
+	//background-color: #666;
+	width: 30%;
+	min-width: 300px;
+	margin: 15px auto;
+}
+.finish-popup{
+	position: fixed;
+	top: -50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 8px;
+	background-color: rgba(0,0,0,.8);
+	width: 300px;
+	height: 250px;
+	color: #f4f4f4;
+	font-size: 34px;
+	line-height: 250px;
+	text-align: center;
+	transition: .3s;
+	cursor: pointer;
+}
+.finish-popup.visible{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 8px;
+	background-color: rgba(0,0,0,.8);
+	width: 300px;
+	height: 250px;
+	color: #f4f4f4;
+	font-size: 34px;
+	line-height: 250px;
+	text-align: center;
+}

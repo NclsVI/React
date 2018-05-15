@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div>
+	<form action=""
+		class="form" 
+		name="testForm">
+		<div class="form__item">
+
+			<input class="form-field" 
+			type="text"
+			required 
+			id="firstname" 
+			name="firstname">
+			<label for="firstname">firstname</label>
+			<span class="error"></span>
+		</div>
+		
+		<div class="form__item">
+			<input class="form-field" 
+			type="text"
+			required
+			name="lastname"
+			id="lastname">
+			<label for="lastname">lastname</label>
+			<span class="error"></span>
+		</div>
+		
+		<div class="form__item">
+			<input class="form-field" 
+			type="text"
+			required
+			name="birthday"
+			id="datepicker">
+			<label for=birthday"">birthday</label>
+			<span class="error"></span>
+		</div>
+		
+		<div class="form__item">
+			<input class="form__item--radio" 
+					type="radio" 
+					id="sex-man" 
+					name="sex" 
+					checked="checked" 
+					value="man">
+			<label for="sex-man">man</label>
+			<input class="form__item--radio" 
+					type="radio" 
+					id="sex-woman" 
+					name="sex" 
+					value="woman">
+			<label for="sex-woman">woman</label>
+			<span class="error"></span>
+		</div>
+		
+		
+		<div class="form__item">
+			<input class="form-field" 
+			type="text"
+			required
+			name="country"
+			id="country" 
+			list="countryList">
+			<label for="country">country</label>
+			<span class="error"></span>
+			<datalist id="countryList"></datalist>
+		</div>
+		
+		<div class="form__item">
+			<input class="form-field" 
+			type="text"
+			required
+			name="email"
+			id="email">
+			<label for="email">email</label>
+			<span class="error"></span>
+		</div>
+		
+		<div class="form__item">
+			<input class="form-field" 
+			type="password"
+			required
+			name="password"
+			id="password">
+			<label for="password">password</label>
+			<span class="error"></span>
+		</div>
+		
+		<div class="form__item">
+			<input class="form-field" 
+			type="text"
+			required
+			name="address"
+			id="address">
+			<label for="address">address</label>
+			<span class="error"></span>
+		</div>
+		
+		<div class="form__item">
+			<textarea class="form-field" 
+				name="notes"
+				id="notes"></textarea>
+				<label for="notes">notes</label>
+		</div>
+		
+		<div class="form__item">
+			<button class="form__item--submit">submit</button>
+		</div>
+	</form>
+
+	<div class="finish-popup">
+		valid
+	</div>
+
+</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="countryList.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
