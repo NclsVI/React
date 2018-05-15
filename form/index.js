@@ -3,7 +3,7 @@ var checkForm = {
 	init: function(){
 		$('button').click(function(event){
 			event.preventDefault();
-			var formData = $( 'form' ).serializeArray();
+			var formData = $('form').serializeArray();
 			checkForm.validationForm(formData);
 		});
 	},
@@ -19,17 +19,17 @@ var checkForm = {
 			if(inputValue){
 				
 				if(checkForm.checkInput[inputName]){
-					checkForm.checkInput[inputName](inputName,inputValue)
+					checkForm.checkInput[inputName](inputName,inputValue);
 				}
 			}
 			else{
 				(inputName=='notes') ? 
 				true : 
-				checkForm.setError(inputName, 'The field can not be empty.')
+				checkForm.setError(inputName, 'The field can not be empty.');
 			}
 		}
 		if(!$('.invalid').length){
-			popupShow(true)
+			popupShow(true);
 		}
 
 	},
@@ -37,47 +37,37 @@ var checkForm = {
 		firstname: function(name,value){
 			var pattern = /['\'','\"'.\d]/;
 			if(pattern.test(value)){
-				checkForm.setError(name, 'first name error')
+				checkForm.setError(name, 'first name error');
 			}
 		},
 		lastname: function(name,value){
 			var pattern = /['\'','\"',\d]/;
 			if(pattern.test(value)){
-				checkForm.setError(name, 'last name error')
+				checkForm.setError(name, 'last name error');
 			}
 		},
 		birthday: function(name,value){
 			if(new Date(value)+''=='Invalid Date'){
-				checkForm.setError(name, 'Invalid Date')
+				checkForm.setError(name, 'Invalid Date');
 			}
 		},
-		country: function(name,value){
-			console.log(name,value)
-		},
 		email: function(name,value){
-			console.log(name,value)
+			console.log(name,value);
 			var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-			(emailReg.test(value)) ? true : checkForm.setError(name, 'Invalid Email format')
+			(emailReg.test(value)) ? true : checkForm.setError(name, 'Invalid Email format');
 		}
 	},
 	setError: function(name, error){
-
-		$('input[name='+name+']').addClass('invalid')
-		$('input[name='+name+']').siblings('.error').text(error)
-		console.log(error)
+		$('input[name='+name+']').addClass('invalid');
+		$('input[name='+name+']').siblings('.error').text(error);
 	}
-
 };
-var popupShow = function(val){
+function popupShow(val){
 	val ? $('.finish-popup').addClass('visible'):$('.finish-popup').removeClass('visible');
 	$('.finish-popup').click(function(){
 		popupShow(false)
 	})
 }
-
-  
-
-
 function createDatePicker() {
 	$( "#datepicker" ).datepicker({
 		maxDate: new Date(),
